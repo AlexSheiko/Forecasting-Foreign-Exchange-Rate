@@ -715,16 +715,6 @@ public class MainUI extends javax.swing.JFrame {
                 super.paintComponent(g);
             }
         };
-        jLabel8 = new javax.swing.JLabel();
-        CurrencyComboBox = new JComboBox()
-        {
-            protected void paintComponent(Graphics g)
-            {
-                g.setColor( getBackground() );
-                g.fillRect(0, 0, getWidth(), getHeight());
-                super.paintComponent(g);
-            }
-        };
         jLabel7 = new javax.swing.JLabel();
         testingDataPath = new JTextField()
         {
@@ -860,7 +850,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabel6.setText("Training Data Path:");
 
         jPanel9.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enter Neurons", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(240, 240, 240))); // NOI18N
+        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enter Neurons", 0, 0, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(240, 240, 240))); // NOI18N
         jPanel9.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jPanel9.setOpaque(false);
 
@@ -1151,7 +1141,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabel9.setText("Training Data Path:");
 
         jPanel11.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enter Neurons", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enter Neurons", 0, 0, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel11.setOpaque(false);
 
         jLabel10.setForeground(new java.awt.Color(240, 240, 240));
@@ -2186,16 +2176,6 @@ public class MainUI extends javax.swing.JFrame {
         jPanel10.setFocusable(false);
         jPanel10.setOpaque(false);
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Select Currency:");
-
-        CurrencyComboBox.setBackground(new java.awt.Color(56, 56, 56, 0));
-        CurrencyComboBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        CurrencyComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "US Dollar", "British Pound", "Euro", "Yen" }));
-        CurrencyComboBox.setAlignmentX(2.0F);
-        CurrencyComboBox.setOpaque(false);
-
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Testing Data:");
@@ -2241,11 +2221,7 @@ public class MainUI extends javax.swing.JFrame {
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(CurrencyComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addGap(270, 270, 270)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(testingDataPath, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2260,8 +2236,6 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(CurrencyComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7)
                     .addComponent(testingDataPath, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(testingBrowseBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2329,7 +2303,7 @@ public class MainUI extends javax.swing.JFrame {
         jPanel12.setOpaque(false);
 
         jPanel13.setBackground(new java.awt.Color(56, 56, 56, 180));
-        jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Select Algorithm", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Select Algorithm", 0, 0, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel13.setOpaque(false);
 
         jRadioButton2.setBackground(new java.awt.Color(56, 56, 56, 180));
@@ -2519,7 +2493,7 @@ public class MainUI extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 614, Short.MAX_VALUE)
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleName("Home");
@@ -2540,37 +2514,6 @@ public class MainUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void testingBrowseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testingBrowseBtnActionPerformed
-        int returnVal = fileChooser.showOpenDialog(this);
-        if (returnVal == JFileChooser.APPROVE_OPTION) {
-            File file = fileChooser.getSelectedFile();
-            testingDataPath.setText(file.getAbsolutePath());
-        } else {
-            System.out.println("File access cancelled by user.");
-        }
-    }//GEN-LAST:event_testingBrowseBtnActionPerformed
-
-    private void doneButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doneButton1ActionPerformed
-        
-    }//GEN-LAST:event_doneButton1ActionPerformed
-
-    private void forecastBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_forecastBtnActionPerformed
-        setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-        DefaultTableModel dtm = (DefaultTableModel) forecastTable.getModel();
-        dtm.setRowCount(0);
-        dtm.setRowCount(4);
-        
-        if(algo == 1){
-            startFForecast();
-        }else{
-            startRForecast();
-        }
-        
-        setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-
-        
-    }//GEN-LAST:event_forecastBtnActionPerformed
-
     private void startFForecast(){
         
         BufferedReader br = null;
@@ -2584,7 +2527,7 @@ public class MainUI extends javax.swing.JFrame {
                 
         File testDataFile = new File(testingDataPath.getText());
 
-        currencyCol = CurrencyComboBox.getSelectedIndex()+1;
+        currencyCol = 1;
         currency = Utility.getCurrency(currencyCol);
         
         File file = new File("FFresource/" + currency + ".csv");
@@ -2687,7 +2630,7 @@ public class MainUI extends javax.swing.JFrame {
                 
         File testDataFile = new File(testingDataPath.getText());
 
-        currencyCol = CurrencyComboBox.getSelectedIndex()+1;
+        currencyCol = 1;
         currency = Utility.getCurrency(currencyCol);
         
         File file = new File("RNNresource/" + currency + ".csv");
@@ -2834,20 +2777,6 @@ public class MainUI extends javax.swing.JFrame {
     }
     
    
-    private void doneButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_doneButton1MouseClicked
-        // TODO add your handling code here:
-        if(algo == 1){
-            jFrame1.pack();
-            jFrame1.setVisible(true);
-        }
-        else if(algo == 2){
-            jFrame2.pack();
-            jFrame2.setVisible(true);
-        }
-           
-            
-    }//GEN-LAST:event_doneButton1MouseClicked
-
     private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
         // TODO add your handling code here:
         
@@ -2952,34 +2881,11 @@ public class MainUI extends javax.swing.JFrame {
         jFrame2.dispose();
     }//GEN-LAST:event_rFinishBtnActionPerformed
 
-    private void testingDataPathMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_testingDataPathMouseClicked
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_testingDataPathMouseClicked
-
-    private void testingDataPathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testingDataPathActionPerformed
-        // TODO add your handling code here:
-        testingDataPath.selectAll();
-    }//GEN-LAST:event_testingDataPathActionPerformed
-
-    private void jRadioButton1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jRadioButton1ItemStateChanged
-        // TODO add your handling code here:
-        algo = 1;
-    }//GEN-LAST:event_jRadioButton1ItemStateChanged
-
-    private void jRadioButton2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jRadioButton2ItemStateChanged
-        // TODO add your handling code here:
-        algo = 2;
-    }//GEN-LAST:event_jRadioButton2ItemStateChanged
-
-    private void testingDataPathFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_testingDataPathFocusGained
-        // TODO add your handling code here:
-        testingDataPath.selectAll();
-    }//GEN-LAST:event_testingDataPathFocusGained
-
-    private void forecastTableFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_forecastTableFocusLost
-        forecastTable.getSelectionModel().clearSelection();
-    }//GEN-LAST:event_forecastTableFocusLost
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        DefaultTableModel dtm = (DefaultTableModel) forecastTable.getModel();
+        dtm.setRowCount(0);
+        dtm.setRowCount(4);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void graphBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_graphBtnActionPerformed
         int i = forecastTable.getRowCount();
@@ -3000,21 +2906,10 @@ public class MainUI extends javax.swing.JFrame {
             }
             xySeriesCollection.addSeries(dataset1);
             xySeriesCollection.addSeries(dataset2);
-            switch(CurrencyComboBox.getSelectedIndex())
-            {
-                case 0: l=45 ;
+            
+            l=45 ;
                 h=75 ;
-                break;
-                case 1: l=70 ;
-                h=110 ;
-                break;
-                case 2: l=60 ;
-                h=100 ;
-                break;
-                case 3: l=40 ;
-                h=80 ;
-                break;
-            }
+                
             LineChart.main(args, xySeriesCollection,l,h);
         }
         else
@@ -3025,10 +2920,36 @@ public class MainUI extends javax.swing.JFrame {
         }        // TODO add your handling code here:
     }//GEN-LAST:event_graphBtnActionPerformed
 
-    private void jPanel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseExited
-        jPanel6.setBackground(new java.awt.Color(255, 255, 255, 220));
-        jTextArea5.setDisabledTextColor(new java.awt.Color(51, 51, 51));
-    }//GEN-LAST:event_jPanel6MouseExited
+    private void doneButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doneButton1ActionPerformed
+
+    }//GEN-LAST:event_doneButton1ActionPerformed
+
+    private void doneButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_doneButton1MouseClicked
+        // TODO add your handling code here:
+        if(algo == 1){
+            jFrame1.pack();
+            jFrame1.setVisible(true);
+        }
+        else if(algo == 2){
+            jFrame2.pack();
+            jFrame2.setVisible(true);
+        }
+
+    }//GEN-LAST:event_doneButton1MouseClicked
+
+    private void jRadioButton1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jRadioButton1ItemStateChanged
+        // TODO add your handling code here:
+        algo = 1;
+    }//GEN-LAST:event_jRadioButton1ItemStateChanged
+
+    private void jRadioButton2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jRadioButton2ItemStateChanged
+        // TODO add your handling code here:
+        algo = 2;
+    }//GEN-LAST:event_jRadioButton2ItemStateChanged
+
+    private void forecastTableFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_forecastTableFocusLost
+        forecastTable.getSelectionModel().clearSelection();
+    }//GEN-LAST:event_forecastTableFocusLost
 
     private void jPanel6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseEntered
         jPanel6.setBackground(new java.awt.Color(0,150,136,220));
@@ -3041,10 +2962,10 @@ public class MainUI extends javax.swing.JFrame {
         jRadioButton2.setSelected(true);
     }//GEN-LAST:event_jPanel6MouseClicked
 
-    private void jTextArea5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea5MouseExited
+    private void jPanel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseExited
         jPanel6.setBackground(new java.awt.Color(255, 255, 255, 220));
         jTextArea5.setDisabledTextColor(new java.awt.Color(51, 51, 51));
-    }//GEN-LAST:event_jTextArea5MouseExited
+    }//GEN-LAST:event_jPanel6MouseExited
 
     private void jTextArea5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea5MouseEntered
         jPanel6.setBackground(new java.awt.Color(0,150,136,220));
@@ -3057,10 +2978,10 @@ public class MainUI extends javax.swing.JFrame {
         jRadioButton2.setSelected(true);
     }//GEN-LAST:event_jTextArea5MouseClicked
 
-    private void jPanel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseExited
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255, 220));
-        jTextArea4.setDisabledTextColor(new java.awt.Color(51, 51, 51));
-    }//GEN-LAST:event_jPanel4MouseExited
+    private void jTextArea5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea5MouseExited
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255, 220));
+        jTextArea5.setDisabledTextColor(new java.awt.Color(51, 51, 51));
+    }//GEN-LAST:event_jTextArea5MouseExited
 
     private void jPanel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseEntered
         jPanel4.setBackground(new java.awt.Color(0,150,136,220));
@@ -3073,11 +2994,10 @@ public class MainUI extends javax.swing.JFrame {
         jRadioButton1.setSelected(true);
     }//GEN-LAST:event_jPanel4MouseClicked
 
-    private void jTextArea4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea4MouseExited
+    private void jPanel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseExited
         jPanel4.setBackground(new java.awt.Color(255, 255, 255, 220));
         jTextArea4.setDisabledTextColor(new java.awt.Color(51, 51, 51));
-
-    }//GEN-LAST:event_jTextArea4MouseExited
+    }//GEN-LAST:event_jPanel4MouseExited
 
     private void jTextArea4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea4MouseEntered
         jPanel4.setBackground(new java.awt.Color(0,150,136,220));
@@ -3090,11 +3010,49 @@ public class MainUI extends javax.swing.JFrame {
         jRadioButton1.setSelected(true);
     }//GEN-LAST:event_jTextArea4MouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jTextArea4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea4MouseExited
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255, 220));
+        jTextArea4.setDisabledTextColor(new java.awt.Color(51, 51, 51));
+    }//GEN-LAST:event_jTextArea4MouseExited
+
+    private void forecastBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_forecastBtnActionPerformed
+        setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
         DefaultTableModel dtm = (DefaultTableModel) forecastTable.getModel();
         dtm.setRowCount(0);
         dtm.setRowCount(4);
-    }//GEN-LAST:event_jButton1ActionPerformed
+
+        if(algo == 1){
+            startFForecast();
+        }else{
+            startRForecast();
+        }
+
+        setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_forecastBtnActionPerformed
+
+    private void testingBrowseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testingBrowseBtnActionPerformed
+        int returnVal = fileChooser.showOpenDialog(this);
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File file = fileChooser.getSelectedFile();
+            testingDataPath.setText(file.getAbsolutePath());
+        } else {
+            System.out.println("File access cancelled by user.");
+        }
+    }//GEN-LAST:event_testingBrowseBtnActionPerformed
+
+    private void testingDataPathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testingDataPathActionPerformed
+        // TODO add your handling code here:
+        testingDataPath.selectAll();
+    }//GEN-LAST:event_testingDataPathActionPerformed
+
+    private void testingDataPathMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_testingDataPathMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_testingDataPathMouseClicked
+
+    private void testingDataPathFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_testingDataPathFocusGained
+        // TODO add your handling code here:
+        testingDataPath.selectAll();
+    }//GEN-LAST:event_testingDataPathFocusGained
 
     private FocusListener fcsListener = new FocusListener() {
         @Override
@@ -3181,7 +3139,6 @@ public class MainUI extends javax.swing.JFrame {
       
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> CurrencyComboBox;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton doneButton1;
     private javax.swing.JSpinner epochInput;
@@ -3222,7 +3179,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
