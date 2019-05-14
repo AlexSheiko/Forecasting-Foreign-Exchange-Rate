@@ -103,7 +103,8 @@ public class MainUI extends javax.swing.JFrame {
         try {
             this.iconImage = ImageIO.read(getClass().getResource("/resources/icon.png"));
             setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
-            initComponents();                
+            initComponents();  
+            rCurrencyComboBox.setVisible(false);
         } catch (IOException ex) {
             Logger.getLogger(MainUI.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -224,8 +225,6 @@ public class MainUI extends javax.swing.JFrame {
         rFilePath = new java.awt.TextField();
         jButton6 = new javax.swing.JButton();
         testLabel1 = new javax.swing.JLabel();
-        rCurrencyComboBox = new javax.swing.JComboBox<>();
-        jLabel26 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
@@ -244,6 +243,7 @@ public class MainUI extends javax.swing.JFrame {
         rSpinner = new javax.swing.JSpinner();
         jLabel30 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        rCurrencyComboBox = new javax.swing.JSpinner();
         buttonGroup1 = new javax.swing.ButtonGroup();
         jScrollPane2 = new javax.swing.JScrollPane();
         jPanel1 = new JPanel()
@@ -354,7 +354,7 @@ public class MainUI extends javax.swing.JFrame {
         fileChooser.setFileFilter(new MyCustomFilter());
 
         jFrame1.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        jFrame1.setTitle("Train Feed Forward Neural Network");
+        jFrame1.setTitle("Параметры тренировки нейронной сети");
         jFrame1.setBackground(new java.awt.Color(102, 102, 102));
         jFrame1.setFocusTraversalPolicyProvider(true);
         jFrame1.setIconImage(iconImage);
@@ -366,7 +366,8 @@ public class MainUI extends javax.swing.JFrame {
         jPanel5.setAlignmentY(0.0F);
         jPanel5.setPreferredSize(new java.awt.Dimension(480, 480));
 
-        submitBtn.setText("Start");
+        submitBtn.setBackground(new java.awt.Color(0, 204, 0));
+        submitBtn.setText("Запуск");
         submitBtn.setOpaque(false);
         submitBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -374,6 +375,7 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
+        filePath.setText("Data/training.csv");
         filePath.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 filePathFocusGained(evt);
@@ -385,7 +387,7 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setText("Browse");
+        jButton4.setText("Изменить...");
         jButton4.setOpaque(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -395,17 +397,17 @@ public class MainUI extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel6.setText("Training Data Path:");
+        jLabel6.setText("Путь к датасету для тренировки:");
 
         jPanel9.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enter Neurons", 0, 0, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(240, 240, 240))); // NOI18N
+        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Введите нейроны", 0, 0, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(240, 240, 240))); // NOI18N
         jPanel9.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jPanel9.setOpaque(false);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(240, 240, 240));
         jLabel3.setLabelFor(inputNeurons);
-        jLabel3.setText("Input Layer:");
+        jLabel3.setText("Входной слой:");
         jLabel3.setToolTipText("");
         jLabel3.setAlignmentY(0.0F);
         jLabel3.setMaximumSize(new java.awt.Dimension(63, 14));
@@ -414,7 +416,7 @@ public class MainUI extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel4.setText("Hidden Layer:");
+        jLabel4.setText("Скрытый слой:");
 
         hiddenNeurons.setModel(new javax.swing.SpinnerNumberModel(1, 1, 500, 1));
         JFormattedTextField format2 = ((JSpinner.DefaultEditor) hiddenNeurons.getEditor()).getTextField();
@@ -423,7 +425,7 @@ public class MainUI extends javax.swing.JFrame {
         hiddenNeurons.setOpaque(false);
 
         jLabel5.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel5.setText("Output Layer:");
+        jLabel5.setText("Выходной слой:");
 
         fOutputNeurons.setModel(new javax.swing.SpinnerNumberModel(1, null, null, 1));
         JFormattedTextField format3 = ((JSpinner.DefaultEditor) fOutputNeurons.getEditor()).getTextField();
@@ -507,7 +509,7 @@ public class MainUI extends javax.swing.JFrame {
         jProgressBar1.setForeground(new java.awt.Color(51, 128, 244));
         jProgressBar1.setStringPainted(true);
 
-        finishBtn.setText("Finish");
+        finishBtn.setText("Финиш");
         finishBtn.setEnabled(false);
         finishBtn.setOpaque(false);
         finishBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -519,7 +521,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setLabelFor(epochInput);
-        jLabel1.setText("Number of Epoch");
+        jLabel1.setText("Количество эпох");
 
         epochInput.setModel(new javax.swing.SpinnerNumberModel(500, 1, 50000, 500));
         JFormattedTextField format0 = ((JSpinner.DefaultEditor) epochInput.getEditor()).getTextField();
@@ -548,7 +550,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addGap(63, 63, 63)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(finishBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -569,8 +571,8 @@ public class MainUI extends javax.swing.JFrame {
                                     .addGap(0, 0, Short.MAX_VALUE))
                                 .addComponent(filePath, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(34, Short.MAX_VALUE))
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -654,7 +656,7 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setText("Browse");
+        jButton6.setText("Изменить...");
         jButton6.setOpaque(false);
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -662,24 +664,11 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
-        rCurrencyComboBox.setBackground(new java.awt.Color(56, 56, 56, 0));
-        rCurrencyComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "US Dollar", "British Pound", "Euro", "Yen" }));
-        rCurrencyComboBox.setOpaque(false);
-        rCurrencyComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rCurrencyComboBoxActionPerformed(evt);
-            }
-        });
-
-        jLabel26.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel26.setText("Select Currency                                           :");
-
         jLabel9.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel9.setText("Training Data Path:");
+        jLabel9.setText("Путь к датасету для тренировки:");
 
         jPanel11.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Enter Neurons", 0, 0, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Введите нейроны", 0, 0, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel11.setOpaque(false);
 
         jLabel10.setForeground(new java.awt.Color(240, 240, 240));
@@ -691,7 +680,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabel10.setPreferredSize(new java.awt.Dimension(63, 14));
 
         jLabel11.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel11.setText("Hidden Layer:");
+        jLabel11.setText("Скрытый слой:");
 
         rHiddenNeurons1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 500, 1));
         JFormattedTextField format5 = ((JSpinner.DefaultEditor) rHiddenNeurons1.getEditor()).getTextField();
@@ -700,7 +689,7 @@ public class MainUI extends javax.swing.JFrame {
         rHiddenNeurons1.setOpaque(false);
 
         jLabel12.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel12.setText("Output Layer:");
+        jLabel12.setText("Выходной слой:");
 
         jLabel27.setFont(new java.awt.Font("Kartika", 1, 11)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(255, 153, 102));
@@ -807,7 +796,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setLabelFor(rSpinner);
-        jLabel2.setText("Number of Epoch");
+        jLabel2.setText("Количество эпох");
 
         rSpinner.setModel(new javax.swing.SpinnerNumberModel(500, 1, 50000, 500));
         JFormattedTextField format8 = ((JSpinner.DefaultEditor) rSpinner.getEditor()).getTextField();
@@ -824,6 +813,8 @@ public class MainUI extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("          :");
 
+        rCurrencyComboBox.setModel(new javax.swing.SpinnerNumberModel(500, 1, 50000, 500));
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -835,24 +826,6 @@ public class MainUI extends javax.swing.JFrame {
                         .addGap(224, 224, 224)
                         .addComponent(testLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(210, 210, 210))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel26)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel30)
-                                .addGap(88, 88, 88)
-                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(111, 111, 111)))
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rCurrencyComboBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rSpinner, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(rSubmitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -861,19 +834,32 @@ public class MainUI extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                         .addComponent(rFilePath, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(rProgressBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(rProgressBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel30)
+                                .addGap(88, 88, 88)
+                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(111, 111, 111)
+                                .addComponent(rSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(70, 70, 70))
+            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                    .addContainerGap(442, Short.MAX_VALUE)
+                    .addComponent(rCurrencyComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(71, 71, 71)))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel26)
-                    .addComponent(rCurrencyComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(36, 36, 36)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -898,7 +884,12 @@ public class MainUI extends javax.swing.JFrame {
                 .addComponent(rProgressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(testLabel1)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
+            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel7Layout.createSequentialGroup()
+                    .addGap(46, 46, 46)
+                    .addComponent(rCurrencyComboBox)
+                    .addGap(392, 392, 392)))
         );
 
         javax.swing.GroupLayout jFrame2Layout = new javax.swing.GroupLayout(jFrame2.getContentPane());
@@ -936,7 +927,7 @@ public class MainUI extends javax.swing.JFrame {
         jFrame2.setLocationRelativeTo(null);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Exchange Rate Forecast");
+        setTitle("Прогноз обменного курса");
         setIconImage(iconImage);
 
         jPanel1.setOpaque(false);
@@ -957,9 +948,10 @@ public class MainUI extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Testing Data:");
+        jLabel7.setText("Датасет для тестирования:");
 
         testingDataPath.setBackground(new java.awt.Color(255, 255, 255, 200));
+        testingDataPath.setText("Data/testing.csv");
         testingDataPath.setMargin(new java.awt.Insets(2, 4, 2, 2));
         testingDataPath.setOpaque(false);
         testingDataPath.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -979,7 +971,7 @@ public class MainUI extends javax.swing.JFrame {
         });
 
         testingBrowseBtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        testingBrowseBtn.setText("Browse");
+        testingBrowseBtn.setText("Изменить...");
         testingBrowseBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 testingBrowseBtnActionPerformed(evt);
@@ -987,7 +979,7 @@ public class MainUI extends javax.swing.JFrame {
         });
 
         forecastBtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        forecastBtn.setText("Forecast");
+        forecastBtn.setText("Спрогнозировать");
         forecastBtn.setOpaque(false);
         forecastBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1005,10 +997,10 @@ public class MainUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(testingDataPath, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(testingBrowseBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(testingBrowseBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(forecastBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addComponent(forecastBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1037,7 +1029,7 @@ public class MainUI extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "  Date", "  Input", "  Expected Output", "  Actual Output"
+                "  Дата", "Входные данные", "Ожидаемый результат", "Фактический результат"
             }
         ) {
             Class[] types = new Class [] {
@@ -1082,14 +1074,14 @@ public class MainUI extends javax.swing.JFrame {
         jPanel12.setOpaque(false);
 
         jPanel13.setBackground(new java.awt.Color(56, 56, 56, 180));
-        jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Select Algorithm", 0, 0, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Выберите алгоритм", 0, 0, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel13.setOpaque(false);
 
         jRadioButton2.setBackground(new java.awt.Color(56, 56, 56, 180));
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setText("Recurrent Neural Network");
+        jRadioButton2.setText("Рецидивирующая нейронная сеть");
         jRadioButton2.setContentAreaFilled(false);
         jRadioButton2.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -1102,11 +1094,16 @@ public class MainUI extends javax.swing.JFrame {
         jRadioButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setSelected(true);
-        jRadioButton1.setText("Feed Forward Neural Network");
+        jRadioButton1.setText("Прямая нейронная сеть");
         jRadioButton1.setContentAreaFilled(false);
         jRadioButton1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jRadioButton1ItemStateChanged(evt);
+            }
+        });
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
             }
         });
 
@@ -1151,7 +1148,7 @@ public class MainUI extends javax.swing.JFrame {
         jPanel2.setOpaque(false);
 
         doneButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        doneButton1.setText("Train NN");
+        doneButton1.setText("Натренировать");
         doneButton1.setOpaque(false);
         doneButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1188,7 +1185,7 @@ public class MainUI extends javax.swing.JFrame {
         jPanel30.setOpaque(false);
 
         graphBtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        graphBtn.setText("Plot Graph");
+        graphBtn.setText("Граффик");
         graphBtn.setOpaque(false);
         graphBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1197,7 +1194,7 @@ public class MainUI extends javax.swing.JFrame {
         });
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setText("Reset");
+        jButton1.setText("Сбросить");
         jButton1.setOpaque(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1243,7 +1240,7 @@ public class MainUI extends javax.swing.JFrame {
                             .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(134, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1262,7 +1259,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addGap(36, 36, 36))
         );
 
-        jTabbedPane1.addTab("          Forecast          ", jPanel8);
+        jTabbedPane1.addTab("Прогноз", jPanel8);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1567,51 +1564,6 @@ public class MainUI extends javax.swing.JFrame {
         }        
     }
     
-    private void rSubmitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSubmitBtnActionPerformed
-        rSubmitBtn.setEnabled(false);
-        rFinishBtn.setEnabled(false);
-        setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-        
-        double minErrorCondition = 0.01;
-
-        RecurrentData data = new RecurrentData();        
-       
-        data.setCurrencyCol(rCurrencyComboBox.getSelectedIndex()+1);
-        data.setInputNeurons((Integer) rInputNeurons.getValue());
-        data.setHiddenNeurons1((Integer) rHiddenNeurons1.getValue());
-        data.setHiddenNeurons2((Integer) rHiddenNeurons2.getValue());
-        data.setOutputNeurons((Integer) rOutputNeurons.getValue());
-        data.setFilePath(rFilePath.getText());
-        data.setEpoch((Integer)rSpinner.getValue());
-        data.setMinError(minErrorCondition);
-        data.setContext(this);
-        
-        RecurrentTrain task = new RecurrentTrain(data);
-        task.addPropertyChangeListener(new MyRnnListener());
-        task.execute();          
-    }//GEN-LAST:event_rSubmitBtnActionPerformed
-
-    private void rFilePathFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_rFilePathFocusGained
-        // TODO add your handling code here:
-        rFilePath.selectAll();
-    }//GEN-LAST:event_rFilePathFocusGained
-
-    private void rFilePathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rFilePathActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rFilePathActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        rFilePath.setText(chooseFile());
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void rCurrencyComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rCurrencyComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rCurrencyComboBoxActionPerformed
-
-    private void rFinishBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rFinishBtnActionPerformed
-        jFrame2.dispose();
-    }//GEN-LAST:event_rFinishBtnActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         DefaultTableModel dtm = (DefaultTableModel) forecastTable.getModel();
         dtm.setRowCount(0);
@@ -1765,6 +1717,51 @@ public class MainUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_submitBtnActionPerformed
 
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void rFinishBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rFinishBtnActionPerformed
+        jFrame2.dispose();
+    }//GEN-LAST:event_rFinishBtnActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        rFilePath.setText(chooseFile());
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void rFilePathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rFilePathActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rFilePathActionPerformed
+
+    private void rFilePathFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_rFilePathFocusGained
+        // TODO add your handling code here:
+        rFilePath.selectAll();
+    }//GEN-LAST:event_rFilePathFocusGained
+
+    private void rSubmitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSubmitBtnActionPerformed
+        rSubmitBtn.setEnabled(false);
+        rFinishBtn.setEnabled(false);
+        setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+
+        double minErrorCondition = 0.01;
+
+        RecurrentData data = new RecurrentData();
+
+        data.setCurrencyCol(1);
+        data.setInputNeurons((Integer) rInputNeurons.getValue());
+        data.setHiddenNeurons1((Integer) rHiddenNeurons1.getValue());
+        data.setHiddenNeurons2((Integer) rHiddenNeurons2.getValue());
+        data.setOutputNeurons((Integer) rOutputNeurons.getValue());
+        data.setFilePath(rFilePath.getText());
+        data.setEpoch((Integer)rSpinner.getValue());
+        data.setMinError(minErrorCondition);
+        data.setContext(this);
+
+        RecurrentTrain task = new RecurrentTrain(data);
+        task.addPropertyChangeListener(new MyRnnListener());
+        task.execute();
+    }//GEN-LAST:event_rSubmitBtnActionPerformed
+
     private FocusListener fcsListener = new FocusListener() {
         @Override
         public void focusGained(FocusEvent e) {
@@ -1877,7 +1874,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
@@ -1906,7 +1902,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JComboBox<String> rCurrencyComboBox;
+    private javax.swing.JSpinner rCurrencyComboBox;
     private java.awt.TextField rFilePath;
     private javax.swing.JButton rFinishBtn;
     private javax.swing.JSpinner rHiddenNeurons1;
