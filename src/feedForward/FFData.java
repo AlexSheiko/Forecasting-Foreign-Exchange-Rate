@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author sanju singh
+ * @author Alona Fadieieva
  */
 public class FFData {
     private int currencyCol;
