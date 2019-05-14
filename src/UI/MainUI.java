@@ -103,7 +103,8 @@ public class MainUI extends javax.swing.JFrame {
         try {
             this.iconImage = ImageIO.read(getClass().getResource("/resources/icon.png"));
             setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
-            initComponents();
+            initComponents();                                  
+        jTabbedPane1.setSelectedIndex(1);
         } catch (IOException ex) {
             Logger.getLogger(MainUI.class.getName()).log(Level.SEVERE, null, ex);
         }
