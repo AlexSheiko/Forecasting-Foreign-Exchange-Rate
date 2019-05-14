@@ -31,7 +31,7 @@ import neuralNetwork.Utility;
 
 /**
  *
- * @author sanju singh
+ * @author Alona Fadieieva
  */
 public class RecurrentTrain extends SwingWorker<Void, Void>{
     

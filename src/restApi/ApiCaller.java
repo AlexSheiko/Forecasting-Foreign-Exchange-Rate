@@ -29,7 +29,7 @@ import org.apache.http.message.BasicNameValuePair;
 
 /**
  *
- * @author sanju singh
+ * @author Alona Fadieieva
  */
 public class ApiCaller extends SwingWorker<Object, Void>{
     

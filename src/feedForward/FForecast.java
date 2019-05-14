@@ -20,7 +20,7 @@ import neuralNetwork.Utility;
 
 /**
  *
- * @author sanju singh
+ * @author Alona Fadieieva
  */
 public class FForecast {
     

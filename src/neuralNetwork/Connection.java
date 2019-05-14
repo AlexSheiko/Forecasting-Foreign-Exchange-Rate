@@ -7,7 +7,7 @@ package neuralNetwork;
 
 /**
  *
- * @author sanju singh
+ * @author Alona Fadieieva
  */
 public class Connection {
     double weight = 0;

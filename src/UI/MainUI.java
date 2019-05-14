@@ -637,7 +637,7 @@ public class MainUI extends javax.swing.JFrame {
         jPanel7.setFocusTraversalPolicy(newPolicy);
         jPanel7.setPreferredSize(new java.awt.Dimension(590, 460));
 
-        rSubmitBtn.setText("Start");
+        rSubmitBtn.setText("Начать");
         rSubmitBtn.setOpaque(false);
         rSubmitBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -645,6 +645,7 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
+        rFilePath.setText("Data/training.csv");
         rFilePath.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 rFilePathFocusGained(evt);
@@ -784,7 +785,7 @@ public class MainUI extends javax.swing.JFrame {
         rProgressBar.setForeground(new java.awt.Color(51, 128, 244));
         rProgressBar.setStringPainted(true);
 
-        rFinishBtn.setText("Finish");
+        rFinishBtn.setText("Финиш");
         rFinishBtn.setEnabled(false);
         rFinishBtn.setOpaque(false);
         rFinishBtn.addActionListener(new java.awt.event.ActionListener() {

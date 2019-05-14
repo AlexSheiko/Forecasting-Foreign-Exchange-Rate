@@ -11,7 +11,7 @@ import org.json.JSONObject;
 
 /**
  *
- * @author sanju singh
+ * @author Alona Fadieieva
  */
 public class JsonDataParser {
     

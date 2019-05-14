@@ -33,7 +33,7 @@ import neuralNetwork.Utility;
 
 /**
  *
- * @author sanju singh
+ * @author Alona Fadieieva
  */
 public class FFTrain extends SwingWorker<Object, Void> {
     

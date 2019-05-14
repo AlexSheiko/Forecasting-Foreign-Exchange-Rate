@@ -634,7 +634,7 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="rSubmitBtn">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Start"/>
+                <Property name="text" type="java.lang.String" value="&#x41d;&#x430;&#x447;&#x430;&#x442;&#x44c;"/>
                 <Property name="opaque" type="boolean" value="false"/>
               </Properties>
               <Events>
@@ -642,6 +642,9 @@
               </Events>
             </Component>
             <Component class="java.awt.TextField" name="rFilePath">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Data/training.csv"/>
+              </Properties>
               <Events>
                 <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="rFilePathFocusGained"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rFilePathActionPerformed"/>
@@ -890,7 +893,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="rFinishBtn">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Finish"/>
+                <Property name="text" type="java.lang.String" value="&#x424;&#x438;&#x43d;&#x438;&#x448;"/>
                 <Property name="enabled" type="boolean" value="false"/>
                 <Property name="opaque" type="boolean" value="false"/>
               </Properties>

@@ -12,7 +12,7 @@ import java.util.Vector;
 
 /**
  *
- * @author sanju singh
+ * @author Alona Fadieieva
  */
 public class MyOwnFocusTraversalPolicy
                   extends FocusTraversalPolicy
