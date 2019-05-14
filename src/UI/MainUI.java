@@ -84,7 +84,7 @@ import restApi.ApiCaller;
 
 /**
  *
- * @author sanju singh
+ * @author Alona Fadieieva
  */
 public class MainUI extends javax.swing.JFrame {
 
@@ -201,8 +201,6 @@ public class MainUI extends javax.swing.JFrame {
         filePath = new java.awt.TextField();
         jButton4 = new javax.swing.JButton();
         testLabel = new javax.swing.JLabel();
-        fCurrencyComboBox = new javax.swing.JComboBox<>();
-        jLabel17 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -395,20 +393,6 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
-        fCurrencyComboBox.setBackground(new java.awt.Color(56, 56, 56, 0));
-        fCurrencyComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "US Dollar", "British Pound", "Euro", "Yen" }));
-        fCurrencyComboBox.setOpaque(false);
-        fCurrencyComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fCurrencyComboBoxActionPerformed(evt);
-            }
-        });
-
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setLabelFor(fCurrencyComboBox);
-        jLabel17.setText("Select Currency                                        :");
-
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(240, 240, 240));
         jLabel6.setText("Training Data Path:");
@@ -571,18 +555,13 @@ public class MainUI extends javax.swing.JFrame {
                         .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(jPanel5Layout.createSequentialGroup()
-                                    .addComponent(jLabel1)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jLabel31)
-                                    .addGap(82, 82, 82)
-                                    .addComponent(jLabel14))
-                                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jLabel31)
+                            .addGap(82, 82, 82)
+                            .addComponent(jLabel14)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(fCurrencyComboBox, 0, 137, Short.MAX_VALUE)
-                                .addComponent(epochInput)))
+                            .addComponent(epochInput, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel5Layout.createSequentialGroup()
                             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanel5Layout.createSequentialGroup()
@@ -591,24 +570,19 @@ public class MainUI extends javax.swing.JFrame {
                                 .addComponent(filePath, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(fCurrencyComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(36, 36, 36)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(epochInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(jPanel5Layout.createSequentialGroup()
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(3, 3, 3)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(epochInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(3, 3, 3))
                     .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1026,15 +1000,15 @@ public class MainUI extends javax.swing.JFrame {
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(270, 270, 270)
+                .addContainerGap()
                 .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(testingDataPath, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(testingBrowseBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(forecastBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addGap(22, 22, 22))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1298,7 +1272,7 @@ public class MainUI extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 614, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE)
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleName("Home");
@@ -1582,40 +1556,6 @@ public class MainUI extends javax.swing.JFrame {
     }
     
    
-    private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
-        // TODO add your handling code here:
-        
-        submitBtn.setEnabled(false);
-        finishBtn.setEnabled(false);
-        setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-        
-        double minErrorCondition = 0.01;
-
-        FFData data = new FFData();
-
-        data.setCurrencyCol(fCurrencyComboBox.getSelectedIndex()+1);
-        data.setInputNeurons((Integer) inputNeurons.getValue());
-        data.setHiddenNeurons((Integer) hiddenNeurons.getValue());
-        data.setOutputNeurons((Integer) fOutputNeurons.getValue());
-        data.setFilePath(filePath.getText());
-        data.setEpoch((Integer) epochInput.getValue());
-        data.setMinError(minErrorCondition);
-        data.setContext(this);
-        
-        FFTrain task = new FFTrain(data);
-        task.addPropertyChangeListener(new MyfnnListener());
-        task.execute();        
-        
-    }//GEN-LAST:event_submitBtnActionPerformed
-
-    private void filePathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filePathActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_filePathActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        filePath.setText(chooseFile());
-    }//GEN-LAST:event_jButton4ActionPerformed
-
     private String chooseFile(){
         int returnVal = fileChooser.showOpenDialog(this);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -1627,20 +1567,6 @@ public class MainUI extends javax.swing.JFrame {
         }        
     }
     
-    private void fCurrencyComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fCurrencyComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fCurrencyComboBoxActionPerformed
-
-    private void finishBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finishBtnActionPerformed
-        // TODO add your handling code here:
-        jFrame1.dispose();
-    }//GEN-LAST:event_finishBtnActionPerformed
-
-    private void filePathFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_filePathFocusGained
-        // TODO add your handling code here:
-        filePath.selectAll();
-    }//GEN-LAST:event_filePathFocusGained
-
     private void rSubmitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSubmitBtnActionPerformed
         rSubmitBtn.setEnabled(false);
         rFinishBtn.setEnabled(false);
@@ -1795,6 +1721,50 @@ public class MainUI extends javax.swing.JFrame {
         testingDataPath.selectAll();
     }//GEN-LAST:event_testingDataPathFocusGained
 
+    private void finishBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finishBtnActionPerformed
+        // TODO add your handling code here:
+        jFrame1.dispose();
+    }//GEN-LAST:event_finishBtnActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        filePath.setText(chooseFile());
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void filePathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filePathActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_filePathActionPerformed
+
+    private void filePathFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_filePathFocusGained
+        // TODO add your handling code here:
+        filePath.selectAll();
+    }//GEN-LAST:event_filePathFocusGained
+
+    private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
+        // TODO add your handling code here:
+
+        submitBtn.setEnabled(false);
+        finishBtn.setEnabled(false);
+        setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+
+        double minErrorCondition = 0.01;
+
+        FFData data = new FFData();
+
+        data.setCurrencyCol(1);
+        data.setInputNeurons((Integer) inputNeurons.getValue());
+        data.setHiddenNeurons((Integer) hiddenNeurons.getValue());
+        data.setOutputNeurons((Integer) fOutputNeurons.getValue());
+        data.setFilePath(filePath.getText());
+        data.setEpoch((Integer) epochInput.getValue());
+        data.setMinError(minErrorCondition);
+        data.setContext(this);
+
+        FFTrain task = new FFTrain(data);
+        task.addPropertyChangeListener(new MyfnnListener());
+        task.execute();
+
+    }//GEN-LAST:event_submitBtnActionPerformed
+
     private FocusListener fcsListener = new FocusListener() {
         @Override
         public void focusGained(FocusEvent e) {
@@ -1883,7 +1853,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton doneButton1;
     private javax.swing.JSpinner epochInput;
-    private javax.swing.JComboBox<String> fCurrencyComboBox;
     private javax.swing.JSpinner fOutputNeurons;
     private javax.swing.JFileChooser fileChooser;
     private java.awt.TextField filePath;
@@ -1904,7 +1873,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
