@@ -105,6 +105,7 @@ public class MainUI extends javax.swing.JFrame {
             setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
             initComponents();  
             rCurrencyComboBox.setVisible(false);
+            graphBtn.setVisible(false);
         } catch (IOException ex) {
             Logger.getLogger(MainUI.class.getName()).log(Level.SEVERE, null, ex);
         }
