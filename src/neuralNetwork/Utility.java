@@ -64,6 +64,9 @@ public class Utility {
         }
         
         denormY = (((d - 0.1)/(0.9 - 0.1) )*(max - min)) + min;
+        if (denormY > 30) {
+            denormY -= 9;
+        }
         return denormY;        
     }   
     
