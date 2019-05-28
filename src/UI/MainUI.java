@@ -387,7 +387,7 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setText("Изменить...");
+        jButton4.setText("Змінити...");
         jButton4.setOpaque(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -397,17 +397,17 @@ public class MainUI extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel6.setText("Путь к датасету для тренировки:");
+        jLabel6.setText("Шлях до датасета для тренування:");
 
         jPanel9.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Введите нейроны", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(240, 240, 240))); // NOI18N
+        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Введіть нейрони", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(240, 240, 240))); // NOI18N
         jPanel9.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jPanel9.setOpaque(false);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(240, 240, 240));
         jLabel3.setLabelFor(inputNeurons);
-        jLabel3.setText("Входной слой:");
+        jLabel3.setText("Вхідний шар:");
         jLabel3.setToolTipText("");
         jLabel3.setAlignmentY(0.0F);
         jLabel3.setMaximumSize(new java.awt.Dimension(63, 14));
@@ -416,7 +416,7 @@ public class MainUI extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel4.setText("Скрытый слой:");
+        jLabel4.setText("Прихований шар:");
 
         hiddenNeurons.setModel(new javax.swing.SpinnerNumberModel(1, 1, 500, 1));
         JFormattedTextField format2 = ((JSpinner.DefaultEditor) hiddenNeurons.getEditor()).getTextField();
@@ -425,7 +425,7 @@ public class MainUI extends javax.swing.JFrame {
         hiddenNeurons.setOpaque(false);
 
         jLabel5.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel5.setText("Выходной слой:");
+        jLabel5.setText("Вихідний шар:");
 
         fOutputNeurons.setModel(new javax.swing.SpinnerNumberModel(1, null, null, 1));
         JFormattedTextField format3 = ((JSpinner.DefaultEditor) fOutputNeurons.getEditor()).getTextField();
@@ -463,7 +463,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel23))
                     .addComponent(inputNeurons, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -509,7 +509,7 @@ public class MainUI extends javax.swing.JFrame {
         jProgressBar1.setForeground(new java.awt.Color(51, 128, 244));
         jProgressBar1.setStringPainted(true);
 
-        finishBtn.setText("Финиш");
+        finishBtn.setText("Фініш");
         finishBtn.setEnabled(false);
         finishBtn.setOpaque(false);
         finishBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -521,7 +521,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setLabelFor(epochInput);
-        jLabel1.setText("Количество эпох");
+        jLabel1.setText("Кількість епох");
 
         epochInput.setModel(new javax.swing.SpinnerNumberModel(500, 1, 50000, 500));
         JFormattedTextField format0 = ((JSpinner.DefaultEditor) epochInput.getEditor()).getTextField();
@@ -610,9 +610,9 @@ public class MainUI extends javax.swing.JFrame {
         jFrame1.getContentPane().setLayout(jFrame1Layout);
         jFrame1Layout.setHorizontalGroup(
             jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 580, Short.MAX_VALUE)
+            .addGap(0, 603, Short.MAX_VALUE)
             .addGroup(jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE))
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 603, Short.MAX_VALUE))
         );
         jFrame1Layout.setVerticalGroup(
             jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
