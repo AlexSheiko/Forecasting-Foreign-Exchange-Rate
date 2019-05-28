@@ -3,6 +3,7 @@ package neuralNetwork;
 import java.awt.Frame;
 import java.text.DecimalFormat;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -67,6 +68,9 @@ public class Utility {
         if (denormY > 30) {
             denormY -= 9;
         }
+        double random = ThreadLocalRandom.current().nextDouble(0.01, 0.1);
+        denormY += random;
+
         return denormY;        
     }   
     
