@@ -105,7 +105,6 @@ public class MainUI extends javax.swing.JFrame {
             setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
             initComponents();  
             rCurrencyComboBox.setVisible(false);
-            graphBtn.setVisible(false);
         } catch (IOException ex) {
             Logger.getLogger(MainUI.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -401,7 +400,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabel6.setText("Путь к датасету для тренировки:");
 
         jPanel9.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Введите нейроны", 0, 0, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(240, 240, 240))); // NOI18N
+        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Введите нейроны", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(240, 240, 240))); // NOI18N
         jPanel9.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jPanel9.setOpaque(false);
 
@@ -670,7 +669,7 @@ public class MainUI extends javax.swing.JFrame {
         jLabel9.setText("Путь к датасету для тренировки:");
 
         jPanel11.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Введите нейроны", 0, 0, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Введите нейроны", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel11.setOpaque(false);
 
         jLabel10.setForeground(new java.awt.Color(240, 240, 240));
@@ -1031,7 +1030,7 @@ public class MainUI extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "  Дата", "Входные данные", "Ожидаемый результат", "Фактический результат"
+                "  Дата", "Вхідні дані", "Очікуваний результат", "Фактичний результат"
             }
         ) {
             Class[] types = new Class [] {
@@ -1076,7 +1075,7 @@ public class MainUI extends javax.swing.JFrame {
         jPanel12.setOpaque(false);
 
         jPanel13.setBackground(new java.awt.Color(56, 56, 56, 180));
-        jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Выберите алгоритм", 0, 0, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Выберите алгоритм", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel13.setOpaque(false);
 
         jRadioButton2.setBackground(new java.awt.Color(56, 56, 56, 180));

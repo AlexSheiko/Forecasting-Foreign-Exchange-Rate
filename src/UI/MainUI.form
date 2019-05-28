@@ -1245,19 +1245,19 @@
                                   <Data value="null"/>
                                   <Data value="null"/>
                                 </Column>
-                                <Column editable="true" title="&#x412;&#x445;&#x43e;&#x434;&#x43d;&#x44b;&#x435; &#x434;&#x430;&#x43d;&#x43d;&#x44b;&#x435;" type="java.lang.String">
+                                <Column editable="true" title="&#x412;&#x445;&#x456;&#x434;&#x43d;&#x456; &#x434;&#x430;&#x43d;&#x456;" type="java.lang.String">
                                   <Data value=""/>
                                   <Data value="null"/>
                                   <Data value="null"/>
                                   <Data value="null"/>
                                 </Column>
-                                <Column editable="false" title="&#x41e;&#x436;&#x438;&#x434;&#x430;&#x435;&#x43c;&#x44b;&#x439; &#x440;&#x435;&#x437;&#x443;&#x43b;&#x44c;&#x442;&#x430;&#x442;" type="java.lang.String">
+                                <Column editable="false" title="&#x41e;&#x447;&#x456;&#x43a;&#x443;&#x432;&#x430;&#x43d;&#x438;&#x439; &#x440;&#x435;&#x437;&#x443;&#x43b;&#x44c;&#x442;&#x430;&#x442;" type="java.lang.String">
                                   <Data value=""/>
                                   <Data value="null"/>
                                   <Data value="null"/>
                                   <Data value="null"/>
                                 </Column>
-                                <Column editable="false" title="&#x424;&#x430;&#x43a;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43a;&#x438;&#x439; &#x440;&#x435;&#x437;&#x443;&#x43b;&#x44c;&#x442;&#x430;&#x442;" type="java.lang.String">
+                                <Column editable="false" title="&#x424;&#x430;&#x43a;&#x442;&#x438;&#x447;&#x43d;&#x438;&#x439; &#x440;&#x435;&#x437;&#x443;&#x43b;&#x44c;&#x442;&#x430;&#x442;" type="java.lang.String">
                                   <Data value=""/>
                                   <Data value="null"/>
                                   <Data value="null"/>

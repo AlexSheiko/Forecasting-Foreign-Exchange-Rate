@@ -37,8 +37,8 @@ public class LineChart extends javax.swing.JFrame
       ChartPanel chartPanel = new ChartPanel( lineChart );
       final XYPlot plot = lineChart.getXYPlot();
       ValueAxis axis = plot.getRangeAxis();
-      axis.setUpperBound(h);
-      axis.setLowerBound(l);
+      axis.setUpperBound(29);
+      axis.setLowerBound(23);
       chartPanel.setPreferredSize( new java.awt.Dimension( 1120 , 580 ) );
       setContentPane( chartPanel );
    }
